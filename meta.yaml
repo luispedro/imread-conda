@@ -1,10 +1,10 @@
 package:
   name: imread
-  version: !!str 0.4
+  version: !!str 0.5
 
 source:
   git_url: git://github.com/luispedro/imread.git
-  git_tag: release-0.4
+  git_tag: release-0.5
 
 #  patches:
    # List any patch files here
