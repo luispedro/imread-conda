@@ -1,29 +1,30 @@
 package:
   name: imread
-  version: !!str 0.5
+  version: !!str 0.5.1
 
 source:
   git_url: git://github.com/luispedro/imread.git
-  git_tag: release-0.5
+  git_tag: release-0.5.1
 
-#  patches:
-   # List any patch files here
-   # - fix.patch
+  patches:
+    - add_sys_prefix_include.patch
 
-
-  # If this is a new build for the same version, increment the build
-  # number. If you do not include this key, it defaults to 0.
-  # number: 1
+build:
+  number: 0
 
 requirements:
   build:
     - python
     - setuptools
     - numpy
+    - libpng
+    - libwebp
 
   run:
     - python
     - numpy
+    - libpng
+    - libwebp
 
 test:
   # Python imports
@@ -32,6 +33,8 @@ test:
 
 
   requires:
+    - libpng
+    - libwebp
     - nose
     - scipy
 
